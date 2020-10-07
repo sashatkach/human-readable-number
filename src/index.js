@@ -34,7 +34,7 @@ module.exports = function toReadable(number) {
 
     let result = '';
     if ((number % 100 > 0 && number % 100 % 10 === 0) || (number % 10 === 0 && number < 100)) {
-        result = numbers[number % 100];
+        result += numbers[number % 100];
     } else if (number % 100 > 0 && number % 100 < 21) {
         result += numbers[number % 100];
     } else if (number % 100 >= 21 && number % 100 < 100) {
